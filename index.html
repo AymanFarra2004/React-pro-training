@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/headerStyle.css" />
+    <link rel="stylesheet" href="./styles/leftSideStyle.css" />
+    <link rel="stylesheet" href="./styles/prductsStyle.css" />
+    <link rel="stylesheet" href="./styles/bottom&footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <div>
+        <div id="full-header">
+          <!-- Top Header -->
+          <header id="top-header" class="section">
+            <div class="content">
+              <div class="contacts-topHeader">
+                <div class="phone-no">
+                  <img src="./images/phone-icon.svg" alt="phone icon" />
+                  <p>(+800)123 456 7890</p>
+                </div>
+                <div class="email-no">
+                  <img src="./images/email-icon.svg" alt="email icon" />
+                  <p>manager@shop.com</p>
+                </div>
+              </div>
+
+              <nav class="others-topHeader">
+                <div class="humburgerMenu-container">
+                  <button class="hamburger" aria-label="menu">&#9776;</button>
+                  <ul class="hamburger-menu">
+                    <li class="location">
+                      <img
+                        src="./images/location-icon.svg"
+                        alt="location icon"
+                      />
+                      <p>Location store</p>
+                    </li>
+                    <li class="blog">
+                      <img src="./images/blog-icon.svg" alt="blog icon" />
+                      <p>Blog</p>
+                    </li>
+                    <li class="guarantee">
+                      <img
+                        src="./images/guarantee-icon.svg"
+                        alt="guarantee icon"
+                      />
+                      <p>Guarantee</p>
+                    </li>
+                    <li class="payment">
+                      <img src="./images/payment-icon.svg" alt="payment icon" />
+                      <p>Payment</p>
+                    </li>
+                    <li class="delivery">
+                      <img
+                        src="./images/delivery-icon.svg"
+                        alt="delivery icon"
+                      />
+                      <p>Delivery</p>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="signin-register">
+                  <li>
+                    <img src="./images/person-icon.svg" alt="person icon" />
+                    <p>Register or Sign in</p>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+
+          <!-- Main Header -->
+          <header id="main-header" class="section">
+            <div class="content">
+              <div class="top">
+                <div class="logo"><span>You</span>Shop</div>
+                <p class="description">Descricption of your online store</p>
+                <div class="search-bar">
+                  <input type="text" placeholder="Search" />
+                  <button>
+                    <img src="./images/search-icon.svg" alt="search icon" />
+                  </button>
+                </div>
+                <p class="work-hours">7 days a week from 8:00 am to 5:00 pm</p>
+                <div class="favoritescart">
+                  <div class="favorites">
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                    <div class="favorites-counter">13</div>
+                  </div>
+                  <div class="cart">
+                    <div class="cart-image">
+                      <img src="./images/cart-icon.svg" alt="cart icon" />
+                      <div class="cart-counter">0</div>
+                    </div>
+                    <div class="cart-total">
+                      My Cart
+                      <p>$ 0.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mainHeader-separator"></div>
+              <div class="bottom">
+                <div class="categouries">
+                  <img
+                    src="./images/categories-icon.svg"
+                    alt="categories icon"
+                  />
+                  <p>All Categories</p>
+                </div>
+                <button>&lt;</button>
+                <div class="categories-show">
+                  <nav class="categories-list">
+                    <ul>
+                      <li>Apple</li>
+                      <li>Samsung</li>
+                      <li>Xiaomi</li>
+                      <li>Honor</li>
+                      <li>Oppo</li>
+                      <li>Huawei</li>
+                      <li>Realme</li>
+                      <li>OnePlus</li>
+                      <li>Lenovo</li>
+                    </ul>
+                  </nav>
+                </div>
+                <button>&gt;</button>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <!--------- main content ------------>
+        <div id="address-wrapper">
+          <div class="path">
+            <p>Home / Categories / Tablebt & Laptop Acceccories</p>
+          </div>
+          <div class="main-address">
+            <h1>Tablebt & Laptop Acceccories</h1>
+          </div>
+        </div>
+
+        <main id="main-content">
+          <!-------------- menu ------------->
+          <button class="filter-humburger">&#9776;</button>
+          <aside id="left-side">
+            <section class="menu">
+              
+              <div class="related-categories">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Related Categories</h3>
+                </div>
+                <div>
+                  <h4>&lt; Categories</h4>
+                  <p>Tablebt & Laptop Acceccories</p>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="refine">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Refine by</h3>
+                </div>
+                <div>
+                  <div class="refine-button">
+                    <div>
+                      <input type="text" placeholder="type here" />
+                      <button><img src="./images/x-symbol.svg" /></button>
+                    </div>
+                  </div>
+                  <button>Clear All</button>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="price">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Price</h3>
+                </div>
+                <div class="slider-container">
+                  <div id="slider"></div>
+                  <div class="price-values">
+                    <span class="slider-price">Price:</span> $<span id="min-val"
+                      >50</span
+                    >
+                    – $<span id="max-val">5000</span>
+                  </div>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="operating-system">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Operating System</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Android 15</li>
+                    <li>Android 14</li>
+                    <li>Android 13</li>
+                    <li>Android 12</li>
+                    <li>Android 11</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="screen-size">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Screen Size</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>1920x1200</li>
+                    <li>1280x800</li>
+                    <li>2650x1600</li>
+                    <li>1920x1080</li>
+                    <li>2048x1536</li>
+                    <li>1920x1280</li>
+                    <li>1024x600</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="processor-core">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Processor Core</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+              <div class="processor-core">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Processor Core</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="processor-core">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Processor Core</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+
+              <div class="processor-core">
+                <div>
+                  <img
+                    src="./images/arrow-drop-down-icon.svg"
+                    alt="list arrow"
+                  />
+                  <h3>Processor Core</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                  </ul>
+                </div>
+                <div class="menu-separator"></div>
+              </div>
+            </section>
+
+            <article class="products-tags">
+              <h3>Product tag</h3>
+              <div class="tags">
+                <button>Asus Tablet</button>
+                <button>Windows Tablet</button>
+                <button>Xiaomi Tablet</button>
+                <button class="active">Hover</button>
+              </div>
+            </article>
+          </aside>
+
+          <section id="products">
+            <div class="products-header">
+              <div class="products-filter">
+                <img src="./images/grid-icon.svg" />
+                <img src="./images/menu-lines-icon.svg" />
+                <p>Showing 16 / 125 results</p>
+              </div>
+              <select name="sort-by">
+                <option>sort by: Price high to low</option>
+                <option>sort by: Price low to high</option>
+                <option>sort by: Alphabet</option>
+                <option>sort by: Lorem, ipsum dolor.</option>
+              </select>
+            </div>
+            <section class="products-box">
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image1.png" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image1.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image3.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image1.png" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image1.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image3.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image1.png" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image1.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image2.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/phone-image3.jpg" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+              <article>
+                <div class="product-img">
+                  <img src="./images/tablet-image1.png" alt="product image" />
+                </div>
+                <div>
+                  <img
+                    src="./images/stars-icon.svg"
+                    alt="evaluation stars image"
+                  />
+                </div>
+                <p>Product Name</p>
+                <p>$000.00</p>
+                <div class="mouse-over">
+                  <button>Add to cart</button>
+                  <button>
+                    <img src="./images/heart-icon.svg" alt="heart icon" />
+                  </button>
+                </div>
+              </article>
+            </section>
+            <section class="showMore-btn">
+              <button>
+                <img
+                  src="./images/circular-arrow-icon.svg"
+                  alt="loading arrow"
+                />
+                Show more
+              </button>
+            </section>
+            <section class="products-pages">
+              <ul>
+                <li>
+                  <button class="arrow-btn">
+                    <img
+                      src="./images/dropdown-arrow-icon.svg"
+                      alt="left arrow"
+                    />
+                  </button>
+                </li>
+                <li><button class="active">1</button></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><button>5</button></li>
+                <li><div>...</div></li>
+                <li><button>26</button></li>
+                <li>
+                  <button class="arrow-btn">
+                    <img
+                      src="./images/dropdown-arrow-icon.svg"
+                      alt="right arrow"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </section>
+
+            <section class="recently-viwed">
+              <h2>Recently Viwed</h2>
+              <div class="recently-products-box">
+                <article>
+                  <div class="product-img">
+                    <img src="./images/tablet-image1.png" alt="product image" />
+                  </div>
+                  <div>
+                    <img
+                      src="./images/stars-icon.svg"
+                      alt="evaluation stars image"
+                    />
+                  </div>
+                  <p>Product Name</p>
+                  <p>$000.00</p>
+                </article>
+                <article>
+                  <div class="product-img">
+                    <img src="./images/tablet-image2.jpg" alt="product image" />
+                  </div>
+                  <div>
+                    <img
+                      src="./images/stars-icon.svg"
+                      alt="evaluation stars image"
+                    />
+                  </div>
+                  <p>Product Name</p>
+                  <p>$000.00</p>
+                </article>
+                <article>
+                  <div class="product-img">
+                    <img src="./images/phone-image1.jpg" alt="product image" />
+                  </div>
+                  <div>
+                    <img
+                      src="./images/stars-icon.svg"
+                      alt="evaluation stars image"
+                    />
+                  </div>
+                  <p>Product Name</p>
+                  <p>$000.00</p>
+                </article>
+                <article>
+                  <div class="product-img">
+                    <img src="./images/phone-image2.jpg" alt="product image" />
+                  </div>
+                  <div>
+                    <img
+                      src="./images/stars-icon.svg"
+                      alt="evaluation stars image"
+                    />
+                  </div>
+                  <p>Product Name</p>
+                  <p>$000.00</p>
+                </article>
+              </div>
+            </section>
+          </section>
+        </main>
+
+        <div class="most-searched-separator"></div>
+        <section class="most-searched-section">
+          <div>
+            <h3>Most Search Keywords</h3>
+            <div class="keywords-list">
+              <strong>Laptops:</strong>
+              <a href="#">Appleo Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Acero Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Samsing Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Lenov Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Benyo Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Delli Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Asuso Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Toshibao Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">LGB Laptop</a>
+              <div class="keywords-separator"></div>
+              <a href="#">HPQ Laptop</a>
+            </div>
+            <div class="keywords-list">
+              <strong>Tablet:</strong>
+              <a href="#">FUKID Tablets</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Titan Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Casioo Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Fasttrack Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Timexo Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Fossili Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Dieselo Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Toshibao Watches</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Luxury Watches</a>
+            </div>
+            <div class="keywords-list">
+              <strong>Mebile phone:</strong>
+              <a href="#">Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Casual Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Sports Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Adidas Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Gas Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Pumai Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Reeboki Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Woodlandi Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Red Tape Shoes</a>
+              <div class="keywords-separator"></div>
+              <a href="#">Nikeo Shoes</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="container footer-content">
+            <div class="footer-column contact">
+              <h4>Contact us</h4>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="./images/phone-icon.svg" alt="phone icon" /> (+9)
+                    123 456 7890</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/email-icon.svg" alt="email cion" />
+                    manager@shop.com</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/location-icon.svg"
+                      alt="location icon"
+                    />
+                    Location store</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column policies">
+              <h4>Policies & Info</h4>
+              <ul>
+                <li><a href="#">Terms Conditions</a></li>
+                <li><a href="#">Policy for Sellers</a></li>
+                <li><a href="#">Policy for Buyers</a></li>
+                <li><a href="#">Shipping & Refund</a></li>
+                <li><a href="#">Wholesale Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-column links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Seller Login</a></li>
+                <li><a href="#">Seller Signup</a></li>
+                <li><a href="#">Seller Handbook</a></li>
+                <li><a href="#">Seller Control</a></li>
+                <li><a href="#">Panel Seller FAQs</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>My account</h4>
+              <ul>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Balcony Table</a></li>
+                <li><a href="#">Bar Units</a></li>
+                <li><a href="#">Beds</a></li>
+                <li><a href="#">Bedside Tables</a></li>
+              </ul>
+            </div>
+            <div class="footer-column subscribe">
+              <h4>Subscribe now</h4>
+              <p>
+                Contrary to popular belief of lorem ipsum Latin amet fun from.
+              </p>
+              <div class="email-input">
+                <input type="email" placeholder="Your E-mail address..." />
+                <button>
+                  <img src="./images/send-icon.svg" alt="send icon" />
+                </button>
+              </div>
+              <div class="social-media">
+                <a href="#"
+                  ><img src="./images/facebook-icon.svg" alt="facebook icon"
+                /></a>
+                <a href="#"
+                  ><img src="./images/twitter-icon.svg" alt="twitter icon"
+                /></a>
+                <a href="#"
+                  ><img src="./images/youtube-icon.svg" alt="youtube icon"
+                /></a>
+                <a href="#"
+                  ><img src="./images/network-icon.svg" alt="network icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <footer class="container copyright">
+          <p>Copyright © 2018 Dish Chsbanov</p>
+          <div>
+            <span
+              ><img src="./images/google-pay-icon.svg" alt="google pay icon"
+            /></span>
+            <span
+              ><img src="./images/bitcoin-icon.svg" alt="bitcoin icon"
+            /></span>
+            <span
+              ><img
+                src="./images/cash-on-delivery-icon.svg"
+                alt="cash on delivery icon"
+            /></span>
+            <span
+              ><img src="./images/discover-icon.svg" alt="discover icon"
+            /></span>
+            <span
+              ><img src="./images/maestro-icon.svg" alt="maestro icon"
+            /></span>
+            <span
+              ><img src="./images/mastercard-icon.svg" alt="mastercard icon"
+            /></span>
+            <span
+              ><img src="./images/paypal-icon.svg" alt="paypal icon"
+            /></span>
+            <span
+              ><img src="./images/visa-icon.svg" alt="visacard icon"
+            /></span>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
