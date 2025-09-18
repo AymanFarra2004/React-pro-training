@@ -1,4 +1,10 @@
 /* menu */
+#left-side {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
 .menu {
   margin-top: 15px;
   width: 250px;
@@ -33,17 +39,30 @@
   background-color: rgb(207, 207, 207, 0.7);
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
 }
+@media (max-width: 768px) {
+  .menu {
+    width: 180px;
+  }
+  .menu > div > div > h3 {
+    font-size: 14px;
+  }
+  .menu > div > div > img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .filter-humburger {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 120px;
   height: 40px;
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 20px 0 rgba(0, 0, 0, 0.1);
   border: none;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 @media (max-width: 900px) {
   .filter-humburger {
@@ -106,19 +125,19 @@
   align-items: center;
   border-radius: 50px;
   overflow: hidden;
-  width: 200px;
+  width: 80%;
 }
 .refine .refine-button > div > input {
   border: none;
   height: 30px;
-  width: 140px;
+  width: 70%;
   padding-left: 10px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 .refine .refine-button > div > button {
   border: none;
-  width: 50px;
+  width: 30%;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -154,7 +173,7 @@
 }
 /* Slider */
 .slider-container {
-  width: 180px;
+  width: 72%;
   height: 50px;
   margin: 40px auto;
   display: flex;
@@ -199,6 +218,12 @@
   border: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   cursor: grab;
+}
+@media (max-width:768px) {
+  /* .noUi-horizontal .noUi-handle {
+    height: 14px !important;
+    width: 14px !important;
+  } */
 }
 .noUi-handle:active {
   cursor: grabbing;
@@ -274,19 +299,36 @@
 }
 
 @media (max-width: 900px) {
+  #left-side {
+  flex-direction: row;
+  }
   .products-tags {
     display: none;
     position: relative;
     top: 0;
     margin-left: 20px;
+    align-self: flex-start;
   }
   .products-tags.active {
     display: block;
   }
 }
-
+@media (max-width: 768px) {
+.products-tags .tags button {
+  font-size: 13px;
+}
+}
 @media (max-width: 500px) {
   .products-tags {
     width: auto;
+  }
+}
+@media (max-width: 400px) {
+  #left-side {
+    flex-direction: column;
+  }
+  .products-tags {
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 }

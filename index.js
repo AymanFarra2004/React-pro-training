@@ -81,11 +81,15 @@ const mouseOverSection = document.querySelectorAll(
 productCard.forEach((el, index) => {
   const currentHeight = el.offsetHeight;
   el.addEventListener('mouseover', () => {
-    mouseOverSection[index].style.display = 'flex';
+    if (window.innerWidth > 768) {
+      mouseOverSection[index].style.display = 'flex';
+    }
     /* el.style.height = currentHeight + 30 + "px"; */
   });
   el.addEventListener('mouseleave', () => {
-    mouseOverSection[index].style.display = 'none';
+    if (window.innerWidth > 768) {
+      mouseOverSection[index].style.display = 'none';
+    }
     /* el.style.height = currentHeight+"px"; */
   });
 });
@@ -114,7 +118,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
 const leftBtn = document.querySelector('.bottom button:first-of-type');
 const rightBtn = document.querySelector('.bottom button:last-of-type');
 const categories = document.querySelector('.categories-list');
@@ -135,12 +138,10 @@ rightBtn.addEventListener('click', () => {
   }
 });
 
-
-
-const filterHumburgerBtn = document.querySelector(".filter-humburger");
-const menu = document.querySelector(".menu");
-const productsTags = document.querySelector(".products-tags");
-filterHumburgerBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  productsTags.classList.toggle("active");
-})
+const filterHumburgerBtn = document.querySelector('.filter-humburger');
+const menu = document.querySelector('.menu');
+const productsTags = document.querySelector('.products-tags');
+filterHumburgerBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  productsTags.classList.toggle('active');
+});

@@ -12,6 +12,16 @@
   padding: 0 70px;
   box-sizing: border-box;
 }
+@media (max-width: 1180px) {
+  .section .content {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 768px) {
+  .section .content {
+    padding: 0 10px;
+  }
+}
 
 /* -------- Top Header -------- */
 #top-header {
@@ -493,10 +503,10 @@
   cursor: pointer;
 }
 @media (max-width: 1000px) {
-.bottom button {
-  display: flex;
-}
-  .categories-list  {
+  .bottom button {
+    display: flex;
+  }
+  .categories-list {
     overflow: hidden;
     overflow-x: auto;
     overflow-y: hidden;
@@ -506,6 +516,4 @@
   .categories-list::-webkit-scrollbar {
     display: none;
   }
-  
 }
-
