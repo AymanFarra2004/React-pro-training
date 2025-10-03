@@ -1,0 +1,28 @@
+.side-bar {
+    width: 217px;
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid var(--border-gray);
+}
+.sideBar-container {
+    margin-top: 24px;
+}
+.side-bar .sideBar-item {
+    width: 100%;
+    height: 24px;
+    margin: 16px 0;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+.side-bar .sideBar-item > img {
+    width: 12px;
+    height: 12px;
+    margin-left: auto;
+    margin-right: 12px;
+    cursor: pointer;
+}

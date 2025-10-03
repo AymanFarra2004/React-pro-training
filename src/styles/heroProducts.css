@@ -1,0 +1,89 @@
+.hero-product {
+  background-color: black;
+  display: flex;
+  position: relative;
+  min-width: 900px;
+  margin: 40px 0 0 45px;
+  overflow: hidden;
+}
+.heroProduct-info {
+  padding: 50px;
+  color: white;
+  max-width: 300px;
+}
+.heroProduct-info > div {
+  display: flex;
+  align-items: center;
+  max-height: 49px;
+}
+.heroProduct-info > div > img {
+  width: 40px;
+  height: 49px;
+}
+.heroProduct-info > div > h3 {
+  margin-left: 24px;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.heroProduct-info > h2 {
+  margin-top: 20px;
+  font-size: 4.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+.heroProduct-info > button {
+  background-color: black;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  min-width: 115px;
+  padding: 0;
+  cursor: pointer;
+}
+.heroProduct-info > button:focus {
+  outline: none;
+}
+.heroProduct-info > button > img {
+  height: 14px;
+  width: 17px;
+  margin-left: auto;
+}
+
+.sliderBtn-container {
+  margin-top: auto;
+  width: 110px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 11px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.sliderBtn-container > div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgb(145, 145, 145);
+  cursor: pointer;
+}
+.sliderBtn-container > div.active {
+  width: 8px;
+  height: 8px;
+  background-color: #db4444;
+  border: 2px solid #ffffff;
+}
+
+.hero-product > img {
+    align-self: flex-end;
+    width: 55%;
+}
