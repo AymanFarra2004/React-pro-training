@@ -1,4 +1,4 @@
-import "../styles/header.css";
+import '../styles/header.css';
 import searchIcon from '../assets/images/search-icon.svg';
 import favouritesIcon from '../assets/images/favourites-icon.svg';
 import cartIcon from '../assets/images/cart-icon.svg';
@@ -15,20 +15,20 @@ export default function Header() {
 function TopHeader() {
   return (
     <div className="topHeader-container">
-    <section className="top-header">
-      <div className="offers">
-        <p>
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-        </p>
-        <button>shopNow</button>
-      </div>
-      <div className="langauge-toggle">
-        <select id="lang">
-          <option value="en">English</option>
-          <option value="ar">العربية</option>
-        </select>
-      </div>
-    </section>
+      <section className="top-header">
+        <div className="offers">
+          <p>
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          </p>
+          <button>shopNow</button>
+        </div>
+        <div className="langauge-toggle">
+          <select id="lang">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+      </section>
     </div>
   );
 }
@@ -36,12 +36,13 @@ function TopHeader() {
 function BottomHeader() {
   return (
     <div className="bottomHeader-container">
-    <section className="bottom-header">
-      <Logo />
-      <NavBar />
-      <SearchBar />
-      <UserActions />
-    </section></div>
+      <section className="bottom-header">
+        <Logo />
+        <NavBar />
+        <SearchBar />
+        <UserActions />
+      </section>
+    </div>
   );
 }
 function Logo() {

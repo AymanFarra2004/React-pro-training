@@ -152,6 +152,6 @@
 }
 
 .header-underLine {
-    background-color: var(--border-gray);
-    height: 0.5px;
+  background-color: var(--border-gray);
+  height: 0.5px;
 }

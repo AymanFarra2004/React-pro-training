@@ -1,8 +1,12 @@
 .home-container {
-    display: flex;
+  display: flex;
   justify-content: center;
   padding: 0 70px;
 }
 .home-container main {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+}
+.home-mainContent {
+  display: flex;
 }

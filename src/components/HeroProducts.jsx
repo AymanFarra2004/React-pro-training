@@ -1,12 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import '../styles/heroProducts.css';
 import appleIcon from '../assets/images/apple-icon.svg';
 import heroProduct from '../assets/images/hero-product.svg';
 import arrowIcon from '../assets/images/arrow2-icon.svg';
 
-
 export default function HeroProducts() {
-   useEffect(() => {
+  useEffect(() => {
     const sliderBtns = document.querySelectorAll('.sliderBtn-container > div');
     sliderBtns.forEach((el, index) => {
       el.addEventListener('click', () => {
@@ -14,7 +13,7 @@ export default function HeroProducts() {
         sliderBtns[index].classList.add('active');
       });
     });
-  }, []); 
+  }, []);
   return (
     <section className="hero-product">
       <HeroProductInfo />
