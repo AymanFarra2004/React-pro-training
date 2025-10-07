@@ -11,30 +11,31 @@ import fourStarsEvaluate from '../assets/images/FourStars-evaluate.svg';
 export default function TodaysProducts() {
   return (
     <section className="today-products">
-      <Title title="Today" />
+      <DepartmentTitle title="Today" />
       <div>
+        <Title title="Flash Sales" />
         <Timer />
-        <SwappingArrows section="SwappingArrows" />
+        <SwappingArrows section="todayProducts" />
       </div>
       <Products />
     </section>
   );
 }
 
-function Title(props) {
+export function DepartmentTitle(props) {
   return (
-    <div className={`${props.title}-title`}>
+    <div className={`${props.title}-title dept-title`}>
       <div className="square-shape"></div>
       <h1>{props.title}</h1>
     </div>
   );
 }
-
+export function Title(props) {
+  return <h2 className='title'>{props.title}</h2>
+}
 function Timer() {
   return (
     <div className="todayProduct-timer">
-      <h2>Flash Sales</h2>
-      <div className="timer">
         <div className="days-timer">
           <span>Days</span>
           <p>03</p>
@@ -54,14 +55,13 @@ function Timer() {
           <span>Seconds</span>
           <p>56</p>
         </div>
-      </div>
     </div>
   );
 }
 
-function SwappingArrows(props) {
+export function SwappingArrows(props) {
   return (
-    <div className={`swappingArrow-container-${props.section}`}>
+    <div className={`swappingArrow-container-${props.section} swappingArrow-container`}>
       <button className="left-swappingArrow">
         <img src={swappingArrow} alt="left swapping arrow" />
       </button>
@@ -82,6 +82,7 @@ function Products() {
       <div className="todayProducts-section">
         {productsImgs.map((imgSrc, index) => (
           <Product
+            key={index}
             img={imgSrc}
             id={index}
             discount={discount}
@@ -90,17 +91,16 @@ function Products() {
           />
         ))}
       </div>
-        <button className="allProducts-btn">View All Products</button>
+      <button className="allProducts-btn">View All Products</button>
     </section>
   );
 }
 
 function Product(props) {
-    
   return (
     <article className={`product-${props.id}`}>
       <div className="product-img">
-        <img src={props.img} />
+        <img src={props.img} alt={`${props.img} image`}/>
         <div className="discount">-{props.discount}%</div>
         <div className="favourite-btn">
           <img src={favouriteIcon} />
@@ -116,8 +116,8 @@ function Product(props) {
       <div className="product-info">
         <h2>{props.title}</h2>
         <p className="product-price">
-          {"$"+(props.price - props.price * (props.discount / 100))}{' '}
-          <span>{"$"+props.price}</span>
+          {'$' + (props.price - props.price * (props.discount / 100))}{' '}
+          <span>{'$' + props.price}</span>
         </p>
         <div className="evaluate-part">
           <img src={fourStarsEvaluate} />

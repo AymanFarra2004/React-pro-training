@@ -3,6 +3,7 @@ import Header from './Header';
 import SideBar from './SideBar';
 import HeroProducts from './HeroProducts';
 import TodaysProducts from './TodaysProducts';
+import Categories from './categories';
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
             <HeroProducts />
           </div>
           <TodaysProducts />
+          <Categories />
         </main>
       </div>
     </>

@@ -1,18 +1,20 @@
 .today-products {
   margin-top: 140px;
+  border-bottom: 0.5px solid var(--border-gray);
+  margin-bottom: 80px;
 }
-.Today-title {
+.dept-title {
   display: flex;
   align-items: center;
   text-align: center;
 }
-.Today-title > div {
+.dept-title > div {
   width: 20px;
   height: 40px;
   border-radius: 4px;
   background-color: #db4444;
 }
-.Today-title > h1 {
+.dept-title > h1 {
   margin: 0;
   margin-left: 16px;
   color: #db4444;
@@ -25,35 +27,31 @@
   display: flex;
   align-items: center;
   margin-top: 24px;
+  margin-left: 87px;
 }
-.todayProduct-timer > h2 {
+h2.title {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 3.6rem;
   margin: 0;
-  height: 100%;
-  text-align: end;
-  margin-top: 10px;
-}
-.todayProduct-timer > .timer {
+  margin-top: auto;
   display: flex;
-  margin-left: 87px;
+  align-items: center;
 }
-
-.todayProduct-timer > .timer > div span {
+.todayProduct-timer > div span {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   margin: 0;
   margin-bottom: 4px;
 }
-.todayProduct-timer > .timer > div p {
+.todayProduct-timer > div p {
   font-size: 3.2rem;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin: 0;
 }
-.todayProduct-timer > .timer > span {
+.todayProduct-timer  > span {
   color: #e07575;
   font-size: 3rem;
   display: flex;
@@ -65,13 +63,13 @@
 .today-products > div {
   display: flex;
 }
-.swappingArrow-container-SwappingArrows {
+.swappingArrow-container {
   display: flex;
   gap: 8px;
   margin-left: auto;
   align-items: flex-end;
 }
-.swappingArrow-container-SwappingArrows button {
+.swappingArrow-container button {
   background-color: #f5f5f5;
   border-radius: 50%;
   border: none;
@@ -83,7 +81,7 @@
   cursor: pointer;
 }
 
-.swappingArrow-container-SwappingArrows .right-swappingArrow > img {
+.swappingArrow-container .right-swappingArrow > img {
   transform: scaleX(-1);
 }
 
@@ -208,6 +206,7 @@ color: black;
   font-family: 'Poppins', sans-serif;
   margin-top: 60px;
   cursor: pointer;
+  margin-bottom: 60px;
 }
 .todayProducts-container {
   display: flex;
