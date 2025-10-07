@@ -4,6 +4,7 @@ import SideBar from './SideBar';
 import HeroProducts from './HeroProducts';
 import TodaysProducts from './TodaysProducts';
 import Categories from './categories';
+import BestSellingProducts from './BestSellingProducts';
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
           </div>
           <TodaysProducts />
           <Categories />
+          <BestSellingProducts />
         </main>
       </div>
     </>

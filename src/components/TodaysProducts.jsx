@@ -17,7 +17,10 @@ export default function TodaysProducts() {
         <Timer />
         <SwappingArrows section="todayProducts" />
       </div>
-      <Products />
+      <Products
+        imgs={[joystick, RGBkeyboard, monitor, chair]}
+        viewAllBtn={true}
+      />
     </section>
   );
 }
@@ -31,37 +34,39 @@ export function DepartmentTitle(props) {
   );
 }
 export function Title(props) {
-  return <h2 className='title'>{props.title}</h2>
+  return <h2 className="title">{props.title}</h2>;
 }
 function Timer() {
   return (
     <div className="todayProduct-timer">
-        <div className="days-timer">
-          <span>Days</span>
-          <p>03</p>
-        </div>
-        <span>:</span>
-        <div className="hours-timer">
-          <span>Hours</span>
-          <p>23</p>
-        </div>
-        <span>:</span>
-        <div className="minutes-timer">
-          <span>Minutes</span>
-          <p>19</p>
-        </div>
-        <span>:</span>
-        <div className="seconds-timer">
-          <span>Seconds</span>
-          <p>56</p>
-        </div>
+      <div className="days-timer">
+        <span>Days</span>
+        <p>03</p>
+      </div>
+      <span>:</span>
+      <div className="hours-timer">
+        <span>Hours</span>
+        <p>23</p>
+      </div>
+      <span>:</span>
+      <div className="minutes-timer">
+        <span>Minutes</span>
+        <p>19</p>
+      </div>
+      <span>:</span>
+      <div className="seconds-timer">
+        <span>Seconds</span>
+        <p>56</p>
+      </div>
     </div>
   );
 }
 
 export function SwappingArrows(props) {
   return (
-    <div className={`swappingArrow-container-${props.section} swappingArrow-container`}>
+    <div
+      className={`swappingArrow-container-${props.section} swappingArrow-container`}
+    >
       <button className="left-swappingArrow">
         <img src={swappingArrow} alt="left swapping arrow" />
       </button>
@@ -72,8 +77,8 @@ export function SwappingArrows(props) {
   );
 }
 
-function Products() {
-  const productsImgs = [joystick, RGBkeyboard, monitor, chair];
+export function Products(props) {
+  const productsImgs = props.imgs;
   let productName = "Product's Name";
   let productPrice = 500;
   let discount = 40;
@@ -91,7 +96,9 @@ function Products() {
           />
         ))}
       </div>
-      <button className="allProducts-btn">View All Products</button>
+      {props.viewAllBtn && (
+        <button className="allProducts-btn">View All Products</button>
+      )}
     </section>
   );
 }
@@ -100,7 +107,7 @@ function Product(props) {
   return (
     <article className={`product-${props.id}`}>
       <div className="product-img">
-        <img src={props.img} alt={`${props.img} image`}/>
+        <img src={props.img} alt={`${props.img} image`} />
         <div className="discount">-{props.discount}%</div>
         <div className="favourite-btn">
           <img src={favouriteIcon} />
