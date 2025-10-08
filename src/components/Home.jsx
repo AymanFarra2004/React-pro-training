@@ -5,6 +5,7 @@ import HeroProducts from './HeroProducts';
 import TodaysProducts from './TodaysProducts';
 import Categories from './categories';
 import BestSellingProducts from './BestSellingProducts';
+import TrendingProducts from './TrendingProducts';
 export default function Home() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Home() {
           <TodaysProducts />
           <Categories />
           <BestSellingProducts />
+          <TrendingProducts />
         </main>
       </div>
     </>

@@ -20,7 +20,7 @@ export default function BestSellingProducts() {
         />
         <ViewAllButton />
       </div>
-      <Products imgs={[jacket, handBag, rgbGaming, table]} viewAllBtn={false} />
+      <Products imgs={[jacket, handBag, rgbGaming, table]} viewAllBtn={false} isDiscount={false} />
     </section>
   );
 }

@@ -1,4 +1,3 @@
-// Icons.jsx
 import React from "react";
 
 export function PhoneIcon({ color = "black", size = 56 }) {

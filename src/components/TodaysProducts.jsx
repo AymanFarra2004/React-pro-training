@@ -20,6 +20,7 @@ export default function TodaysProducts() {
       <Products
         imgs={[joystick, RGBkeyboard, monitor, chair]}
         viewAllBtn={true}
+        isDiscount = {true}
       />
     </section>
   );
@@ -91,6 +92,7 @@ export function Products(props) {
             img={imgSrc}
             id={index}
             discount={discount}
+            isDiscount={props.isDiscount}
             title={productName}
             price={productPrice}
           />
@@ -108,7 +110,7 @@ function Product(props) {
     <article className={`product-${props.id}`}>
       <div className="product-img">
         <img src={props.img} alt={`${props.img} image`} />
-        <div className="discount">-{props.discount}%</div>
+        {props.isDiscount && <div className="discount">-{props.discount}%</div>}
         <div className="favourite-btn">
           <img src={favouriteIcon} />
         </div>
