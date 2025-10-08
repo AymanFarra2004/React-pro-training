@@ -35,7 +35,7 @@ function CategoriesBox() {
   return (
     <div className="categories-flexbox">
       {categories.map((category, index) => (
-        <Category imgSrc={category.img} id={index} name={category.name} />
+        <Category key={index} imgSrc={category.img} id={index} name={category.name} />
       ))}
     </div>
   );

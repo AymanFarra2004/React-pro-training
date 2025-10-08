@@ -20,7 +20,42 @@ export default function BestSellingProducts() {
         />
         <ViewAllButton />
       </div>
-      <Products imgs={[jacket, handBag, rgbGaming, table]} viewAllBtn={false} isDiscount={false} />
+      <Products
+        products={
+          [{
+            id: 1,
+            name: 'The north coat',
+            price: 360,
+            discount: 27,
+            img: jacket,
+          },
+          {
+            id: 2,
+            name: 'Gucci duffle bag',
+            price: 1160,
+            discount: 22,
+            img: handBag,
+          },
+          {
+            id: 3,
+            name: 'RGB liquid CPU Cooler',
+            price: 160,
+            discount: 20,
+            img: rgbGaming,
+          },
+          {
+            id: 4,
+            name: 'Small BookSelf',
+            price: 360,
+            discount: 25,
+            img: table,
+          }]
+        }
+        viewAllBtn={false}
+        isDiscountImg={false}
+        isDiscountText={true}
+        colorSwitch={false}
+      />
     </section>
   );
 }
