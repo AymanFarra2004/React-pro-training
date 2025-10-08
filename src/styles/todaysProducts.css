@@ -35,8 +35,9 @@ h2.title {
   font-size: 3.6rem;
   margin: 0;
   margin-top: auto;
+    margin-top: 8px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .todayProduct-timer > div span {
   font-size: 1.2rem;

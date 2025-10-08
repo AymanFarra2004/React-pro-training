@@ -68,7 +68,7 @@ export function DepartmentTitle(props) {
   );
 }
 export function Title(props) {
-  return <h2 className="title">{props.title}</h2>;
+  return <h2 className='title' id='featured-title'>{props.title}</h2>;
 }
 function Timer() {
   return (
