@@ -8,6 +8,8 @@ import BestSellingProducts from './BestSellingProducts';
 import TrendingProducts from './TrendingProducts';
 import OurProducts from './OurProducts';
 import Featured from './Featured';
+import OurFeatures from './OurFeatures';
+import Footer from './Footer';
 export default function Home() {
   return (
     <>
@@ -24,8 +26,10 @@ export default function Home() {
           <TrendingProducts />
           <OurProducts />
           <Featured />
+          <OurFeatures />
         </main>
       </div>
+          <Footer />
     </>
   );
 }
