@@ -5,8 +5,9 @@ import { InstagramIcon } from '../assets/images/catigoreisIcons/socialMediaIcons
 import { XIcon } from '../assets/images/catigoreisIcons/socialMediaIcons';
 import { LinkedInIcon } from '../assets/images/catigoreisIcons/socialMediaIcons';
 import qrCode from '../assets/images/qrcode.svg';
-import downloadAppStore from '../assets/images/download-appstore.svg';
-import downloadPlayStore from '../assets/images/download-playstore.svg'
+import downloadAppStore from '../assets/images/download-appstore.png';
+import downloadPlayStore from '../assets/images/download-playstore.png';
+import { useState } from 'react';
 
 export default function Footer() {
   const footerSections = [
@@ -56,6 +57,10 @@ export default function Footer() {
 function FooterSection({ section }) {
   const { type, title, links } = section;
 
+  const [hoverdIcon, setHoverdIcon] = useState();
+  const handleMouseOver = (icon) => {
+    setHoverdIcon(icon);
+  };
   if (type === 'subscription') {
     return (
       <div className="footer-column subscription-section">
@@ -105,10 +110,26 @@ function FooterSection({ section }) {
           </div>
         </div>
         <div className="social-icons">
-          <FacebookIcon />
-          <XIcon />
-          <InstagramIcon/>
-          <LinkedInIcon />
+          <FacebookIcon
+            onMouseOver={() => handleMouseOver('facebook')}
+            color={hoverdIcon === 'facebook' ? '#DB4444' : 'white'}
+            onMouseOut={() => setHoverdIcon(null)}
+          />
+          <XIcon
+            onMouseOver={() => handleMouseOver('x')}
+            color={hoverdIcon === 'x' ? '#DB4444' : 'white'}
+            onMouseOut={() => setHoverdIcon(null)}
+          />
+          <InstagramIcon
+            onMouseOver={() => handleMouseOver('instagram')}
+            color={hoverdIcon === 'instagram' ? '#DB4444' : 'white'}
+            onMouseOut={() => setHoverdIcon(null)}
+          />
+          <LinkedInIcon
+            onMouseOver={() => handleMouseOver('linkedin')}
+            color={hoverdIcon === 'linkedin' ? '#DB4444' : 'white'}
+            onMouseOut={() => setHoverdIcon(null)}
+          />
         </div>
       </div>
     );
