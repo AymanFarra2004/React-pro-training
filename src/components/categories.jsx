@@ -25,24 +25,24 @@ export default function Categories() {
 
 function CategoriesBox() {
   const categories = [
-    { name: 'Phones', img: PhoneIcon },
-    { name: 'Computers', img: ComputerIcon },
-    { name: 'Smart Watch', img: SmartWatchIcon },
-    { name: 'Camera', img: CameraIcon },
-    { name: 'Headphones', img: HeadphoneIcon },
-    { name: 'Gaming', img: GamingIcon },
+    { name: 'Phones', img: PhoneIcon, isSelected:false },
+    { name: 'Computers', img: ComputerIcon, isSelected:false },
+    { name: 'Smart Watch', img: SmartWatchIcon, isSelected:false },
+    { name: 'Camera', img: CameraIcon, isSelected:true },
+    { name: 'Headphones', img: HeadphoneIcon, isSelected:false },
+    { name: 'Gaming', img: GamingIcon, isSelected:false },
   ];
   return (
     <div className="categories-flexbox">
       {categories.map((category, index) => (
-        <Category key={index} imgSrc={category.img} id={index} name={category.name} />
+        <Category key={index} imgSrc={category.img} id={index} name={category.name} isSelected={category.isSelected}/>
       ))}
     </div>
   );
 }
 
 function Category(props) {
-    const [isSelected, setSelected] = useState(false);
+    const [isSelected, setSelected] = useState(props.isSelected);
     const updateSelected = ()=>{
         setSelected(!isSelected);
     }

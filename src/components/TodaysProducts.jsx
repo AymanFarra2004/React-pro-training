@@ -15,8 +15,8 @@ export default function TodaysProducts() {
     <section className="today-products">
       <DepartmentTitle title="Today" />
       <div>
-        <Title title="Flash Sales" />
-        <Timer />
+        <Title title="Flash Sales" sectionName="todayProducts"/>
+        <Timer sectionName="todayProducts"/>
         <SwappingArrows section="todayProducts" />
       </div>
       <Products
@@ -67,12 +67,12 @@ export function DepartmentTitle(props) {
     </div>
   );
 }
-export function Title(props) {
-  return <h2 className='title' id='featured-title'>{props.title}</h2>;
+export function Title({title, sectionName}) {
+  return <h2 className={`${sectionName}-title title`} >{title}</h2>;
 }
-function Timer() {
+function Timer({sectionName}) {
   return (
-    <div className="todayProduct-timer">
+    <div className={`${sectionName}-timer timer`}>
       <div className="days-timer">
         <span>Days</span>
         <p>03</p>
@@ -115,8 +115,8 @@ export function Products(props) {
   const products = props.products;
 
   return (
-    <section className="todayProducts-container">
-      <div className="todayProducts-section">
+    <section className="products-container">
+      <div className="products-section">
         {products.map((product, index) => (
           <Product
             key={index}

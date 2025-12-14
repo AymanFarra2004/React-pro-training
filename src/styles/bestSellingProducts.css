@@ -4,6 +4,8 @@
 .bestSellingProducts-container > div {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .viewAll-btn {
     width: 159px;
@@ -17,4 +19,12 @@
     font-weight: 500;
     cursor: pointer;
     margin-left: auto;
+    /* align-self: flex-end; */
+    order: 2;
+}
+@media ((max-width: 600px)) {
+.viewAll-btn {
+    margin-top: 10px;
+    margin-left: 0;
+}
 }

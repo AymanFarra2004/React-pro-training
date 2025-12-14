@@ -33,6 +33,7 @@
 
 .footer-main-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0px auto;
@@ -168,8 +169,8 @@
 
 @media (max-width: 768px) {
   .footer-main-content {
-    flex-direction: column;
-    gap: 40px;
+    column-gap: 15px;
+    row-gap: 0;
   }
 
   .footer-top-bar {

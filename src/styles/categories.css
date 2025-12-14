@@ -10,6 +10,7 @@ margin-bottom: 70px;
     gap: 30px;
     justify-content: space-between;
     margin-bottom: 70px;
+    flex-wrap: wrap;
 }
 .categories-flexbox > div {
     min-width: 170px;
@@ -22,6 +23,16 @@ margin-bottom: 70px;
     justify-content: center;
     cursor: pointer;
 }
+@media (max-width: 650px) {
+.categories-flexbox {
+    gap: 5px;
+}
+    .categories-flexbox > div {
+    min-width: 110px;
+    min-height: unset;
+    }
+}
+
 .categories-flexbox > div.active {
     background-color: #DB4444;
 }

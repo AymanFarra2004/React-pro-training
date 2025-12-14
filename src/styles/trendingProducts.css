@@ -1,9 +1,11 @@
 .trendingProducts-container {
   display: flex;
-  padding: 69px 56px;
+  flex-wrap: wrap;
+  padding: 69px 0 69px 56px;
   background-color: black;
-  max-height: 500px;
+  /* max-height: 500px; */
   margin-bottom: 71px;
+  justify-content: center;
 }
 .trendingProduct-info .title {
   color: #00ff66;
@@ -23,6 +25,7 @@
 }
 .trendingProduct-timer {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 32px;
 }
@@ -68,9 +71,15 @@
   align-items: center;
   justify-content: center;
   position: relative;
-}
-.trendingProduct-img {
+  margin-top: 10px;
+  margin-right: 56px;
   z-index: 2;
+  /* width: 100%; */
+}
+
+.trendingProduct-img img {
+  max-width: 568px;
+  width: 100%;
 }
 .trendingProduct-img > div {
   width: 504px;

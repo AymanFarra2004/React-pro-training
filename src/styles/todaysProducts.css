@@ -3,6 +3,10 @@
   border-bottom: 0.5px solid var(--border-gray);
   margin-bottom: 80px;
 }
+.today-products > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
 .dept-title {
   display: flex;
   align-items: center;
@@ -23,7 +27,7 @@
   font-weight: 600;
 }
 
-.todayProduct-timer {
+.timer {
   display: flex;
   align-items: center;
   margin-top: 24px;
@@ -39,20 +43,20 @@ h2.title {
   display: flex;
   align-items: flex-end;
 }
-.todayProduct-timer > div span {
+.timer > div span {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   margin: 0;
   margin-bottom: 4px;
 }
-.todayProduct-timer > div p {
+.timer > div p {
   font-size: 3.2rem;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin: 0;
 }
-.todayProduct-timer > span {
+.timer > span {
   color: #e07575;
   font-size: 3rem;
   display: flex;
@@ -61,9 +65,11 @@ h2.title {
   margin: 0 14px;
 }
 
-.today-products > div {
+.toaday-products > div {
   display: flex;
+  flex-wrap: wrap;
 }
+
 .swappingArrow-container {
   display: flex;
   gap: 8px;
@@ -86,11 +92,24 @@ h2.title {
   transform: scaleX(-1);
 }
 
-.todayProducts-section {
+@media (max-width: 768px) {
+  .timer {
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.products-section {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 40px;
+  justify-content: center;
 }
+/* .products-section > article {
+  width: auto;
+} */
 .product-img {
   position: relative;
   object-fit: contain;
@@ -209,7 +228,13 @@ h2.title {
   cursor: pointer;
   margin-bottom: 60px;
 }
-.todayProducts-container {
+@media (max-width: 768px) {
+.allProducts-btn {
+  width: 150px;
+}
+}
+
+.products-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,4 +282,25 @@ h2.title {
   border-width: 2px;
   border-color: black;
   box-shadow: 0 0 0 1px white inset;
+}
+
+
+
+
+
+
+@media (max-width: 750px) {
+ .title {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .swappingArrow-container {
+    order: 2;
+    align-items: unset;
+  }
+
+  .todayProduct-timer {
+    order: 3;
+  }
 }

@@ -2,6 +2,7 @@ import '../styles/header.css';
 import searchIcon from '../assets/images/search-icon.svg';
 import favouritesIcon from '../assets/images/favourites-icon.svg';
 import cartIcon from '../assets/images/cart-icon.svg';
+import { useState } from 'react';
 export default function Header() {
   return (
     <header className="header">
@@ -38,6 +39,7 @@ function BottomHeader() {
     <div className="bottomHeader-container">
       <section className="bottom-header">
         <Logo />
+        <div className="menu-toggle"></div>
         <NavBar />
         <SearchBar />
         <UserActions />
@@ -49,23 +51,32 @@ function Logo() {
   return <h1>Exclusive</h1>;
 }
 function NavBar() {
+  const [navBarBtn, setNavBarBtn] = useState(false);
   return (
-    <nav className="header-nav">
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#signup">Sign Up</a>
-        </li>
-      </ul>
-    </nav>
+    <div className="nav-bar">
+
+        <button className="navBar-btn" onClick={() => setNavBarBtn(!navBarBtn)}>
+          &#9776;
+        </button>
+      
+
+      <nav className={`header-nav ${navBarBtn ? 'active' : ''}`}>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#signup">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 function SearchBar() {

@@ -5,6 +5,23 @@
   min-width: 900px;
   margin: 40px 0 0 45px;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .hero-product {
+    margin-left: 0;
+  }
+}
+@media (max-width: 950px) {
+  .hero-product {
+    flex-direction: column;
+    /* align-items: center; */
+    min-width: unset;
+    width: auto;
+    margin: 0;
+    padding: 0 70px;
+  }
 }
 .heroProduct-info {
   padding: 50px;
@@ -86,4 +103,19 @@
 .hero-product > img {
   align-self: flex-end;
   width: 55%;
+}
+
+@media (max-width: 950px) {
+  .hero-product {
+    padding: 0 30px;
+  }
+  .hero-product > img {
+    width: 70%;
+    align-self: unset;
+  }
+}
+@media (max-width: 950px) {
+  .hero-product {
+    padding: 0;
+  }
 }

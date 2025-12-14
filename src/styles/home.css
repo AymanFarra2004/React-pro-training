@@ -2,12 +2,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 70px;
+  align-items: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .home-container main {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
 }
 .home-mainContent {
   display: flex;
+  
+}
+@media (max-width: 950px) {
+  .home-mainContent {
+    flex-direction: column;
+  }
+}
+.home-container {
+  box-sizing: border-box;
+}
+@media (max-width: 1220px) {
+  .home-container {
+    padding: 30px;
+  }
+  .home-mainContent {
+    justify-content: center;
+    align-items: center;
+  }
 }

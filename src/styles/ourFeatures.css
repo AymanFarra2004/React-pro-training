@@ -1,52 +1,58 @@
 .ourFeatures-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 140px;
+}
+@media (max-width: 768px) {
+  .ourFeatures-container {
+    margin-bottom: 40px;
+  }
 }
 .ourFeatures-flexbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 88px;
 }
 .feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .feature .feature-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #2F2E30;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f2e30;
 }
 .feature .feature-img > div {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 .feature > h2 {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 0;
-    margin-top: 24px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 24px;
 }
 .feature > p {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin: 0;
-    margin: 8px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  margin: 8px;
 }

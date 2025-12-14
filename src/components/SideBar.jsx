@@ -1,5 +1,7 @@
 import '../styles/sideBar.css';
+import { useState } from 'react';
 import arrowIcon from '../assets/images/arrow-icon.svg';
+
 export default function SideBar() {
   const items = [
     { label: "Women's Fashion", hasArrow: true },
@@ -11,25 +13,30 @@ export default function SideBar() {
     { label: 'Groceries & Pets' },
     { label: 'Health & Beauty' },
   ];
+
+  const [menuBtn, setMenuBtn] = useState(false);
+  const handlesideBarBtn= ()=>{
+setMenuBtn(!menuBtn)
+  }
   return (
-    <aside className="side-bar">
-      {/* <WomensFashion />
-      <MensFashion />
-      <Electronics />
-      <HomeLifestyle />
-      <Medicine />
-      <SportsOutdoor />
-      <BabysToys />
-      <GroceriesPets />
-      <HealthBeauty /> */}
-      <div className="sideBar-container">
-        {items.map((item, index) => (
-          <SideBarItem key={index} {...item} />
-        ))}
-      </div>
-    </aside>
+    <div className='sideBar-container'>
+      
+      <button className="sideBar-btn" onClick={handlesideBarBtn}>
+        &#9776;
+      </button>
+
+      <aside className={`side-bar ${menuBtn ? 'active' : ''}`}>
+        <button className='sideBar-closing' onClick={handlesideBarBtn}>X</button>
+        <div className="sideBar-container">
+          {items.map((item, index) => (
+            <SideBarItem key={index} {...item} />
+          ))}
+        </div>
+      </aside>
+    </div>
   );
 }
+
 function SideBarItem({ label, hasArrow }) {
   return (
     <button className="sideBar-item">
@@ -38,39 +45,3 @@ function SideBarItem({ label, hasArrow }) {
     </button>
   );
 }
-/* function WomensFashion() {
-  return (
-    <div className="women-fashion">
-      <h3>Women's Fashion</h3>
-        <img src={arrowIcon} />
-    </div>
-  );
-}
-function MensFashion() {
-  return <div className="women-fashion">
-      <h3>Men's Fashion</h3>
-        <img src={arrowIcon} />
-    </div>;
-}
-function Electronics() {
-  return <h3>Electronics</h3>;
-}
-function HomeLifestyle() {
-  return <h3>Home & Lifestyle</h3>;
-}
-function Medicine() {
-  return <h3>Medicine</h3>;
-}
-function SportsOutdoor() {
-  return <h3>Sports & Outdoor</h3>;
-}
-function BabysToys() {
-  return <h3>Baby's & Toys</h3>;
-}
-function GroceriesPets() {
-  return <h3>Groceries & Pets</h3>;
-}
-function HealthBeauty() {
-  return <h3>Health & Beauty</h3>;
-}
- */
