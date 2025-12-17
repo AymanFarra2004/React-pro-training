@@ -3,6 +3,8 @@ import searchIcon from '../assets/images/search-icon.svg';
 import favouritesIcon from '../assets/images/favourites-icon.svg';
 import cartIcon from '../assets/images/cart-icon.svg';
 import { useState } from 'react';
+import { NavLink } from 'react-router';
+
 export default function Header() {
   return (
     <header className="header">
@@ -61,21 +63,21 @@ function NavBar() {
       
 
       <nav className={`header-nav ${navBarBtn ? 'active' : ''}`}>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#signup">Sign Up</a>
-          </li>
-        </ul>
-      </nav>
+  <ul>
+    <li>
+      <NavLink to="/">Home</NavLink>
+    </li>
+    <li>
+      <NavLink to="/contact">Contact</NavLink>
+    </li>
+    <li>
+      <NavLink to="/about">About</NavLink>
+    </li>
+    <li>
+      <NavLink to="/signup">Sign Up</NavLink>
+    </li>
+  </ul>
+</nav>
     </div>
   );
 }

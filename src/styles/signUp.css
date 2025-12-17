@@ -1,0 +1,109 @@
+.sign-section {
+  padding: 60px 0;
+  padding-right: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sign-img {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 805px;
+}
+.sign-img img {
+  width: 100%;
+}
+
+.sign-mainContetnt {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-width: 370px;
+  margin-left: 130px;
+}
+
+.sign-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 3.6rem;
+}
+.sign-desc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.signup-container {
+  margin-top: 20px;
+    width: 100%;
+
+  max-width: 400px;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  padding: 10px 0;
+  font-size: 1.6rem;
+  outline: none;
+  color: #333;
+}
+
+.input-group input::placeholder {
+  color: #a5a5a5;
+}
+
+.btn-create {
+  width: 100%;
+  background-color: #db4444;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn-google {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid #a5a5a5;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-google img {
+  width: 20px;
+}
+
+.login-text {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  color: #4d4d4d;
+}
+
+.login-text a {
+  color: #4d4d4d;
+  
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #4d4d4d;
+  padding-bottom: 2px;
+}

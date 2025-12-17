@@ -13,7 +13,7 @@ import Footer from './Footer';
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <div className="home-container">
         <main>
           <div className="home-mainContent">
@@ -29,7 +29,6 @@ export default function Home() {
           <OurFeatures />
         </main>
       </div>
-          <Footer />
     </>
   );
 }

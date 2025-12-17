@@ -1,0 +1,42 @@
+.signIn-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  gap: 20px;
+}
+
+.log-in {
+  background-color: #db4444;
+  color: white;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.log-in:hover {
+  background-color: #c13a3a;
+}
+
+.forget-password {
+  color: #db4444;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  background: none;
+  font-weight: 400;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  min-height: 50px;
+}
+
+.forget-password:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
