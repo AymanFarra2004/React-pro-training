@@ -3,7 +3,7 @@ import searchIcon from '../assets/images/search-icon.svg';
 import favouritesIcon from '../assets/images/favourites-icon.svg';
 import cartIcon from '../assets/images/cart-icon.svg';
 import { useState } from 'react';
-import { NavLink } from 'react-router';
+import { Link } from 'react-router';
 
 export default function Header() {
   return (
@@ -56,28 +56,26 @@ function NavBar() {
   const [navBarBtn, setNavBarBtn] = useState(false);
   return (
     <div className="nav-bar">
-
-        <button className="navBar-btn" onClick={() => setNavBarBtn(!navBarBtn)}>
-          &#9776;
-        </button>
-      
+      <button className="navBar-btn" onClick={() => setNavBarBtn(!navBarBtn)}>
+        &#9776;
+      </button>
 
       <nav className={`header-nav ${navBarBtn ? 'active' : ''}`}>
-  <ul>
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/contact">Contact</NavLink>
-    </li>
-    <li>
-      <NavLink to="/about">About</NavLink>
-    </li>
-    <li>
-      <NavLink to="/signup">Sign Up</NavLink>
-    </li>
-  </ul>
-</nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
@@ -95,7 +93,9 @@ function UserActions() {
   return (
     <div className="user-actions">
       <img src={favouritesIcon} alt="favourites icon" />
-      <img src={cartIcon} alt="cart icon" />
+      <Link to="/cart">
+        <img src={cartIcon} alt="cart icon" />
+      </Link>
     </div>
   );
 }

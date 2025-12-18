@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: 'Poppins';
   src: url('./assets/fonts/Poppins-Light.ttf') format('truetype');
@@ -15,6 +13,9 @@
 }
 :root {
   --border-gray: rgb(177, 177, 177);
+  --primary-red: #db4444;
+  --text-black: #000000;
+  --gray-border: #e5e5e5;
 }
 html {
   margin: 0;

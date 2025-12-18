@@ -105,8 +105,8 @@ function FooterSection({ section }) {
             <img src={qrCode} alt="QR Code" />
           </div>
           <div className="app-stores">
-            <img src={downloadPlayStore} alt="Google Play" className="badge" />
-            <img src={downloadAppStore} alt="App Store" className="badge" />
+            <img src={downloadPlayStore} alt="Google Play" />
+            <img src={downloadAppStore} alt="App Store" />
           </div>
         </div>
         <div className="social-icons">

@@ -9,6 +9,7 @@ import favouriteIcon from '../assets/images/favourites-icon.svg';
 import eye from '../assets/images/eye.svg';
 import fourStarsEvaluate from '../assets/images/FourStars-evaluate.svg';
 import { useState } from 'react';
+import { Link } from 'react-router';
 
 export default function TodaysProducts() {
   return (
@@ -153,9 +154,9 @@ function Product(props) {
         <div className="favourite-btn">
           <img src={favouriteIcon} />
         </div>
-        <div className="visbilty-btn">
+        <Link to="/[productName]"><div className="visbilty-btn">
           <img src={eye} />
-        </div>
+        </div></Link>
         <div className="addToCart-btn">
           <button>Add To Cart</button>
         </div>
