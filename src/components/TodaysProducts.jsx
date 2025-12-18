@@ -10,51 +10,58 @@ import eye from '../assets/images/eye.svg';
 import fourStarsEvaluate from '../assets/images/FourStars-evaluate.svg';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import useApi from '../api/api';
 
 export default function TodaysProducts() {
+  const apiProducts = useApi({ info: 'products' });
+  const products = apiProducts.data;
+  const apiError = apiProducts.error;
+  
+  const fakeProducts = [
+    {
+      id: 1,
+      name: 'HAVIT HV-G92 Gamepad',
+      price: 160,
+      discount: 40,
+      img: joystick,
+    },
+    {
+      id: 2,
+      name: 'AK-900 Wired Keyboard',
+      price: 1160,
+      discount: 35,
+      img: RGBkeyboard,
+    },
+    {
+      id: 3,
+      name: 'IPS LCD Gaming Monitor',
+      price: 400,
+      discount: 30,
+      img: monitor,
+    },
+    {
+      id: 4,
+      name: 'S-Series Comfort Chair ',
+      price: 400,
+      discount: 25,
+      img: chair,
+    },
+  ];
   return (
     <section className="today-products">
       <DepartmentTitle title="Today" />
       <div>
-        <Title title="Flash Sales" sectionName="todayProducts"/>
-        <Timer sectionName="todayProducts"/>
+        <Title title="Flash Sales" sectionName="todayProducts" />
+        <Timer sectionName="todayProducts" />
         <SwappingArrows section="todayProducts" />
       </div>
       <Products
-        products={[
-          {
-            id: 1,
-            name: 'HAVIT HV-G92 Gamepad',
-            price: 160,
-            discount: 40,
-            img: joystick,
-          },
-          {
-            id: 2,
-            name: 'AK-900 Wired Keyboard',
-            price: 1160,
-            discount: 35,
-            img: RGBkeyboard,
-          },
-          {
-            id: 3,
-            name: 'IPS LCD Gaming Monitor',
-            price: 400,
-            discount: 30,
-            img: monitor,
-          },
-          {
-            id: 4,
-            name: 'S-Series Comfort Chair ',
-            price: 400,
-            discount: 25,
-            img: chair,
-          },
-        ]}
+        products={products ? products : fakeProducts}
         viewAllBtn={true}
         isDiscountImg={true}
         isDiscountText={true}
         colorSwitch={false}
+        startIndex={0}
       />
     </section>
   );
@@ -68,10 +75,10 @@ export function DepartmentTitle(props) {
     </div>
   );
 }
-export function Title({title, sectionName}) {
-  return <h2 className={`${sectionName}-title title`} >{title}</h2>;
+export function Title({ title, sectionName }) {
+  return <h2 className={`${sectionName}-title title`}>{title}</h2>;
 }
-function Timer({sectionName}) {
+function Timer({ sectionName }) {
   return (
     <div className={`${sectionName}-timer timer`}>
       <div className="days-timer">
@@ -114,19 +121,19 @@ export function SwappingArrows(props) {
 
 export function Products(props) {
   const products = props.products;
-
+const displayedProducts = products.slice(props.startIndex, props.startIndex + 4);
   return (
     <section className="products-container">
       <div className="products-section">
-        {products.map((product, index) => (
+        {displayedProducts.map((product, index) => (
           <Product
-            key={index}
-            img={product.img}
+            key={product.id ? product.id : index}
+            img={product.image}
             id={product.id}
-            discount={product.discount}
+            discount={product.discount?product.discount: 15}
             isDiscountImg={props.isDiscountImg}
             isDiscountText={props.isDiscountText}
-            title={product.name}
+            title={product.title}
             price={product.price}
             colorSwitch={props.colorSwitch}
             color1={product.colors?.color1}
@@ -154,9 +161,11 @@ function Product(props) {
         <div className="favourite-btn">
           <img src={favouriteIcon} />
         </div>
-        <Link to="/[productName]"><div className="visbilty-btn">
-          <img src={eye} />
-        </div></Link>
+        <Link to="/[productName]">
+          <div className="visbilty-btn">
+            <img src={eye} />
+          </div>
+        </Link>
         <div className="addToCart-btn">
           <button>Add To Cart</button>
         </div>
