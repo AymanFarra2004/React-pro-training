@@ -25,7 +25,7 @@ export default function OurFeatures() {
   ];
   return (
     <section className="ourFeatures-container">
-      <div className='ourFeatures-flexbox'>
+      <div className="ourFeatures-flexbox">
         {features.map((feature, index) => (
           <Feature
             key={index}
@@ -47,8 +47,8 @@ function Feature(props) {
           <img src={props.img} alt={`${props.name} image`} />
         </div>
       </div>
-        <h2>{props.name}</h2>
-        <p>{props.desc}</p>
+      <h2>{props.name}</h2>
+      <p>{props.desc}</p>
     </article>
   );
 }

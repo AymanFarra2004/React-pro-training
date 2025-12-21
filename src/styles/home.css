@@ -15,7 +15,6 @@
 }
 .home-mainContent {
   display: flex;
-  
 }
 @media (max-width: 950px) {
   .home-mainContent {

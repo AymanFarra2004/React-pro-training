@@ -37,7 +37,7 @@
 
 .signup-container {
   margin-top: 20px;
-    width: 100%;
+  width: 100%;
 
   max-width: 400px;
 }
@@ -92,8 +92,8 @@
 }
 
 .login-text {
-    font-size: 1.6rem;
-    font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-top: 30px;
   color: #4d4d4d;
@@ -101,7 +101,7 @@
 
 .login-text a {
   color: #4d4d4d;
-  
+
   text-decoration: none;
   font-weight: bold;
   border-bottom: 1px solid #4d4d4d;

@@ -55,7 +55,7 @@ function SignInForm() {
           />
         </div>
 
-        <div className='signIn-btns'>
+        <div className="signIn-btns">
           <button type="submit" className="log-in">
             Log In
           </button>

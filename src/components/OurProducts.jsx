@@ -18,14 +18,15 @@ import Error from './genral/errorPage';
 export default function OurProducts() {
   const apiProducts1 = useApi({ info: "products/category/women's%20clothing" });
   const products1 = apiProducts1.data;
-  const apiProducts2 = useApi({info: 'products/category/jewelery'})
+  const apiProducts2 = useApi({ info: 'products/category/jewelery' });
   const products2 = apiProducts2.data;
   const apiError1 = apiProducts1.error;
   const apiError2 = apiProducts2.error;
   const isLoading1 = apiProducts1.isLoading;
   const isLoading2 = apiProducts2.isLoading;
   if (isLoading1 || isLoading2) return <Loading />;
-  if (apiError1 || apiError2) return <Error message={apiError1.message || apiError2.message} />;
+  if (apiError1 || apiError2)
+    return <Error message={apiError1.message || apiError2.message} />;
 
   const fakeProducts1 = [
     {

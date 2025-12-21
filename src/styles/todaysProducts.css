@@ -39,7 +39,7 @@ h2.title {
   font-size: 3.6rem;
   margin: 0;
   margin-top: auto;
-    margin-top: 8px;
+  margin-top: 8px;
   display: flex;
   align-items: flex-end;
 }
@@ -235,9 +235,9 @@ h2.title {
   margin-bottom: 60px;
 }
 @media (max-width: 768px) {
-.allProducts-btn {
-  width: 150px;
-}
+  .allProducts-btn {
+    width: 150px;
+  }
 }
 
 .products-container {
@@ -295,11 +295,8 @@ h2.title {
   height: 15px;
 }
 
-
-
-
 @media (max-width: 750px) {
- .title {
+  .title {
     order: 1;
     margin-bottom: 0;
   }

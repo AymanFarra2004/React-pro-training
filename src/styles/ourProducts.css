@@ -1,6 +1,6 @@
 .ourProducts-container > div {
-    display: flex;
+  display: flex;
 }
 .todayProducts-section .allProducts-btn {
-    margin-bottom: 140px;
+  margin-bottom: 140px;
 }

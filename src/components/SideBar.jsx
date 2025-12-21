@@ -15,18 +15,19 @@ export default function SideBar() {
   ];
 
   const [menuBtn, setMenuBtn] = useState(false);
-  const handlesideBarBtn= ()=>{
-setMenuBtn(!menuBtn)
-  }
+  const handlesideBarBtn = () => {
+    setMenuBtn(!menuBtn);
+  };
   return (
-    <div className='sideBar-container'>
-      
+    <div className="sideBar-container">
       <button className="sideBar-btn" onClick={handlesideBarBtn}>
         &#9776;
       </button>
 
       <aside className={`side-bar ${menuBtn ? 'active' : ''}`}>
-        <button className='sideBar-closing' onClick={handlesideBarBtn}>X</button>
+        <button className="sideBar-closing" onClick={handlesideBarBtn}>
+          X
+        </button>
         <div className="sideBar-container">
           {items.map((item, index) => (
             <SideBarItem key={index} {...item} />

@@ -42,15 +42,14 @@ function TrendingProductTimer() {
   );
 }
 function BuyNowBtn() {
-    return(
-        <button className='buyNow-btn'>Buy Now!</button>
-    );
+  return <button className="buyNow-btn">Buy Now!</button>;
 }
 
-
 function TrendingProductImg() {
-  return <article className="trendingProduct-img">
-    <img src={speakerImg} alt='speaker image' />
-    <div className='img-shadow'></div>
-  </article>;
+  return (
+    <article className="trendingProduct-img">
+      <img src={speakerImg} alt="speaker image" />
+      <div className="img-shadow"></div>
+    </article>
+  );
 }

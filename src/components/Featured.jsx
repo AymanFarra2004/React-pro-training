@@ -15,25 +15,25 @@ export default function Featured() {
           {
             name: 'PlayStation 5',
             desc: 'Black and White version of the PS5 coming out on sale.',
-            shadowEffect:false,
+            shadowEffect: false,
             img: ps5,
           },
           {
             name: 'Women’s Collections',
             desc: 'Featured woman collections that give you another vibe.',
-            shadowEffect:false,
+            shadowEffect: false,
             img: woman,
           },
           {
             name: 'Speakers',
             desc: 'Amazon wireless speakers',
-            shadowEffect:true,
+            shadowEffect: true,
             img: speakers,
           },
           {
             name: 'Perfume',
             desc: 'GUCCI INTENSE OUD EDP',
-            shadowEffect:true,
+            shadowEffect: true,
             img: prefume,
           },
         ]}
@@ -60,7 +60,11 @@ function FeaturedProducts(props) {
 }
 function FeaturedProduct(props) {
   return (
-    <article className={`featuredProduct featuredProduct${props.id} ${props.shadowEffect&&("shadow")}`}>
+    <article
+      className={`featuredProduct featuredProduct${props.id} ${
+        props.shadowEffect && 'shadow'
+      }`}
+    >
       <img src={props.img} />
       <div className="featuredProduct-info">
         <h2 className="featuredProduct-name">{props.name}</h2>
@@ -70,4 +74,3 @@ function FeaturedProduct(props) {
     </article>
   );
 }
-

@@ -25,32 +25,45 @@ export default function Categories() {
 
 function CategoriesBox() {
   const categories = [
-    { name: 'Phones', img: PhoneIcon, isSelected:false },
-    { name: 'Computers', img: ComputerIcon, isSelected:false },
-    { name: 'Smart Watch', img: SmartWatchIcon, isSelected:false },
-    { name: 'Camera', img: CameraIcon, isSelected:true },
-    { name: 'Headphones', img: HeadphoneIcon, isSelected:false },
-    { name: 'Gaming', img: GamingIcon, isSelected:false },
+    { name: 'Phones', img: PhoneIcon, isSelected: false },
+    { name: 'Computers', img: ComputerIcon, isSelected: false },
+    { name: 'Smart Watch', img: SmartWatchIcon, isSelected: false },
+    { name: 'Camera', img: CameraIcon, isSelected: true },
+    { name: 'Headphones', img: HeadphoneIcon, isSelected: false },
+    { name: 'Gaming', img: GamingIcon, isSelected: false },
   ];
   return (
     <div className="categories-flexbox">
       {categories.map((category, index) => (
-        <Category key={index} imgSrc={category.img} id={index} name={category.name} isSelected={category.isSelected}/>
+        <Category
+          key={index}
+          imgSrc={category.img}
+          id={index}
+          name={category.name}
+          isSelected={category.isSelected}
+        />
       ))}
     </div>
   );
 }
 
 function Category(props) {
-    const [isSelected, setSelected] = useState(props.isSelected);
-    const updateSelected = ()=>{
-        setSelected(!isSelected);
-    }
-    const setColor = isSelected ? "white" : "black";
+  const [isSelected, setSelected] = useState(props.isSelected);
+  const updateSelected = () => {
+    setSelected(!isSelected);
+  };
+  const setColor = isSelected ? 'white' : 'black';
   return (
-    <div className={`${props.name}-category category ${isSelected ? "active" : ""}`} onClick={updateSelected}>
-      <div className="icon"><props.imgSrc color={setColor}/></div>
-      <h2 className={`${isSelected ? "active" : ""}`}>{`${props.name}`}</h2>
+    <div
+      className={`${props.name}-category category ${
+        isSelected ? 'active' : ''
+      }`}
+      onClick={updateSelected}
+    >
+      <div className="icon">
+        <props.imgSrc color={setColor} />
+      </div>
+      <h2 className={`${isSelected ? 'active' : ''}`}>{`${props.name}`}</h2>
     </div>
   );
 }
