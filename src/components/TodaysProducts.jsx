@@ -14,6 +14,7 @@ import useApi from '../api/api';
 import starIcon from '../assets/images/star.svg';
 import Loading from './genral/LoadingPage';
 import Error from './genral/errorPage';
+import { useCart } from './genral/cartContext';
 // import starHalfIcon from '../assets/images/star-half.svg';
 
 export default function TodaysProducts() {
@@ -127,6 +128,7 @@ export function SwappingArrows(props) {
 
 export function Products(props) {
   const products = props.products;
+
   return (
     <section className="products-container">
       <div className="products-section">
@@ -157,6 +159,7 @@ export function Products(props) {
 function Product(props) {
   const [activeColor, setActiveColor] = useState('color-1');
 
+  const { addToCart } = useCart();
   return (
     <article className={`product-${props.id}`}>
       <div className="product-img">
@@ -173,7 +176,7 @@ function Product(props) {
           </div>
         </Link>
         <div className="addToCart-btn">
-          <button>Add To Cart</button>
+          <button onClick={() => addToCart(props)}>Add To Cart</button>
         </div>
       </div>
 
@@ -181,8 +184,13 @@ function Product(props) {
         <h2>{props.title}</h2>
         <div className={!props.isDiscountText ? 'product-info-discount' : ''}>
           <p className="product-price">
-            {'$' + (props.price - props.price * (props.discount / 100)).toFixed(2)}{' '}
-            {props.isDiscountText && <span>{'$' + props.price.toFixed(2)}</span>}
+            {'$' +
+              (props.price - props.price * (props.discount / 100)).toFixed(
+                2
+              )}{' '}
+            {props.isDiscountText && (
+              <span>{'$' + props.price.toFixed(2)}</span>
+            )}
           </p>
 
           <div className="evaluate-part">

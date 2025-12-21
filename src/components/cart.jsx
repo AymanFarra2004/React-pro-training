@@ -1,28 +1,24 @@
 import '../styles/cart.css';
-import monitor from '../assets/images/monitor.png';
-import joystick from '../assets/images/joystick.png';
 import { Link } from 'react-router';
+import { useCart } from './genral/cartContext';
 
 export default function CartPage() {
-  const cartItems = [
-    { id: 1, name: 'LCD Monitor', price: 650, quantity: 1, img: monitor },
-    { id: 2, name: 'H1 Gamepad', price: 550, quantity: 2, img: joystick },
-  ];
+  const { cartItems, removeFromCart } = useCart();
 
   return (
     <div className="cart-container">
       <nav className="breadcrumb">
-       <Link to="/"> Home </Link> / <span>Cart</span>
+        <Link to="/"> Home </Link> / <span>Cart</span>
       </nav>
 
-      <CartTable cartItems={cartItems} />
+      <CartTable cartItems={cartItems} removeItem={removeFromCart} />
       <CartACtionBtns />
       <CartBottom />
     </div>
   );
 }
 
-function CartTable({ cartItems }) {
+function CartTable({ cartItems, removeItem }) {
   return (
     <div className="cart-table">
       <div className="table-header">
@@ -33,18 +29,20 @@ function CartTable({ cartItems }) {
       </div>
 
       {cartItems.map((item) => (
-        <CartItem item={item} />
+        <CartItem item={item} removeItem={removeItem} />
       ))}
     </div>
   );
 }
 
-function CartItem({ item }) {
+function CartItem({ item, removeItem }) {
   return (
     <div key={item.id} className="table-row">
       <div className="product-info-cart">
         <div className="product-img-cart">
-          <button className="remove-btn">×</button>
+          <button className="remove-btn" onClick={() => removeItem(item.id)}>
+            ×
+          </button>
           <img src={item.img} alt={item.name} />
         </div>
         {item.name}
@@ -91,7 +89,11 @@ function CartBottom() {
           <span>Total:</span>
           <span>$1750</span>
         </div>
-        <Link to="/cart/checkout"><button className="btn-primary full-width">Procees to checkout</button></Link>
+        <Link to="/cart/checkout">
+          <button className="btn-primary full-width">
+            Procees to checkout
+          </button>
+        </Link>
       </div>
     </div>
   );
