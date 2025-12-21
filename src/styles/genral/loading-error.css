@@ -1,0 +1,44 @@
+/* تنسيق الـ Spinner (دائرة التحميل) */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #db4444; /* لون ثيم الموقع الخاص بك */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* تنسيق رسالة الخطأ */
+.error-container {
+    text-align: center;
+    color: #db4444;
+    padding: 20px;
+    border: 1px solid #db4444;
+    border-radius: 8px;
+    background-color: #fff5f5;
+    margin: 20px;
+}
+
+.error-container button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #db4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -193,6 +193,7 @@ h2.title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
+  max-width: 300px;
   color: black;
 }
 .product-price {
@@ -289,7 +290,10 @@ h2.title {
   box-shadow: 0 0 0 1px white inset;
 }
 
-
+.star-icon {
+  width: 15px;
+  height: 15px;
+}
 
 
 

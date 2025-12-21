@@ -7,16 +7,23 @@ import monitor from '../assets/images/monitor.png';
 import chair from '../assets/images/chair.png';
 import favouriteIcon from '../assets/images/favourites-icon.svg';
 import eye from '../assets/images/eye.svg';
-import fourStarsEvaluate from '../assets/images/FourStars-evaluate.svg';
+// import fourStarsEvaluate from '../assets/images/FourStars-evaluate.svg';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import useApi from '../api/api';
+import starIcon from '../assets/images/star.svg';
+import Loading from './genral/LoadingPage';
+import Error from './genral/errorPage';
+// import starHalfIcon from '../assets/images/star-half.svg';
 
 export default function TodaysProducts() {
-  const apiProducts = useApi({ info: 'products' });
+  const apiProducts = useApi({ info: 'products/category/electronics' });
   const products = apiProducts.data;
   const apiError = apiProducts.error;
-  
+  const isLoading = apiProducts.isLoading;
+  if (isLoading) return <Loading />;
+  if (apiError) return <Error message={apiError.message} />;
+
   const fakeProducts = [
     {
       id: 1,
@@ -61,7 +68,6 @@ export default function TodaysProducts() {
         isDiscountImg={true}
         isDiscountText={true}
         colorSwitch={false}
-        startIndex={0}
       />
     </section>
   );
@@ -121,16 +127,15 @@ export function SwappingArrows(props) {
 
 export function Products(props) {
   const products = props.products;
-const displayedProducts = products.slice(props.startIndex, props.startIndex + 4);
   return (
     <section className="products-container">
       <div className="products-section">
-        {displayedProducts.map((product, index) => (
+        {products.slice(0, 4).map((product, index) => (
           <Product
             key={product.id ? product.id : index}
             img={product.image}
             id={product.id}
-            discount={product.discount?product.discount: 15}
+            discount={product.discount ? product.discount : 15}
             isDiscountImg={props.isDiscountImg}
             isDiscountText={props.isDiscountText}
             title={product.title}
@@ -138,6 +143,7 @@ const displayedProducts = products.slice(props.startIndex, props.startIndex + 4)
             colorSwitch={props.colorSwitch}
             color1={product.colors?.color1}
             color2={product.colors?.color2}
+            rating={product.rating}
           />
         ))}
       </div>
@@ -175,12 +181,18 @@ function Product(props) {
         <h2>{props.title}</h2>
         <div className={!props.isDiscountText ? 'product-info-discount' : ''}>
           <p className="product-price">
-            {'$' + (props.price - props.price * (props.discount / 100))}{' '}
-            {props.isDiscountText && <span>{'$' + props.price}</span>}
+            {'$' + (props.price - props.price * (props.discount / 100)).toFixed(2)}{' '}
+            {props.isDiscountText && <span>{'$' + props.price.toFixed(2)}</span>}
           </p>
+
           <div className="evaluate-part">
-            <img src={fourStarsEvaluate} />
-            <span>(55)</span>
+            {/* <img src={fourStarsEvaluate} /> */}
+            {Array.from({ length: Math.round(props.rating?.rate || 0) }).map(
+              (_, i) => (
+                <img key={i} src={starIcon} className="star-icon" />
+              )
+            )}
+            <span>({props.rating?.count})</span>
           </div>
         </div>
         {props.colorSwitch && (

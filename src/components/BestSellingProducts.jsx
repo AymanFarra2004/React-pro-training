@@ -7,13 +7,16 @@ import handBag from '../assets/images/hand-bag.png';
 import rgbGaming from '../assets/images/rgb-gaming.png';
 import table from '../assets/images/table.png';
 import useApi from '../api/api';
+import Loading from './genral/LoadingPage';
+import Error from './genral/errorPage';
 
 export default function BestSellingProducts() {
-  const apiProducts = useApi({ info: 'products' });
+  const apiProducts = useApi({ info: "products/category/men's clothing" });
   const products = apiProducts.data;
   const apiError = apiProducts.error;
-  console.log(products);
-  console.log(apiError);
+  const isLoading = apiProducts.isLoading;
+  if (isLoading) return <Loading />;
+  if (apiError) return <Error message={apiError.message} />;
   const fakeProducts = [
     {
       id: 1,

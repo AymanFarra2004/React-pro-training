@@ -12,11 +12,21 @@ import soccerShoes from '../assets/images/soccer-shoes.svg';
 import gamepad1 from '../assets/images/gamepad1.svg';
 import jacket1 from '../assets/images/jacket1.svg';
 import useApi from '../api/api';
+import Loading from './genral/LoadingPage';
+import Error from './genral/errorPage';
 
 export default function OurProducts() {
-  const apiProducts = useApi({ info: 'products' });
-  const products = apiProducts.data;
-  const apiError = apiProducts.error;
+  const apiProducts1 = useApi({ info: "products/category/women's%20clothing" });
+  const products1 = apiProducts1.data;
+  const apiProducts2 = useApi({info: 'products/category/jewelery'})
+  const products2 = apiProducts2.data;
+  const apiError1 = apiProducts1.error;
+  const apiError2 = apiProducts2.error;
+  const isLoading1 = apiProducts1.isLoading;
+  const isLoading2 = apiProducts2.isLoading;
+  if (isLoading1 || isLoading2) return <Loading />;
+  if (apiError1 || apiError2) return <Error message={apiError1.message || apiError2.message} />;
+
   const fakeProducts1 = [
     {
       id: 1,
@@ -102,20 +112,18 @@ export default function OurProducts() {
         <SwappingArrows />
       </div>
       <Products
-        products={products ? products : fakeProducts1}
+        products={products1 ? products1 : fakeProducts1}
         viewAllBtn={false}
         isDiscountImg={false}
         isDiscountText={false}
         colorSwitch={false}
-        startIndex={8}
       />
       <Products
-        products={products ? products : fakeProducts2}
+        products={products2 ? products2 : fakeProducts2}
         viewAllBtn={true}
         isDiscountImg={false}
         isDiscountText={false}
         colorSwitch={true}
-        startIndex={12}
       />
     </section>
   );
